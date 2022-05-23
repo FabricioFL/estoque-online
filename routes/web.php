@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/login', [LoginController::class, 'render']);
+
+Route::post('/login', [LoginController::class, 'login']);
+
+Route::get('/register', [RegisterController::class, 'render']);
+
+Route::post('/register', [RegisterController::class, 'createUser']);
+
+Route::get('/dashboard', [DashboardController::class, 'render']);
+
+Route::get('/logout', [DashboardController::class, 'logout']);
