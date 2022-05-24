@@ -11,12 +11,18 @@ class LoginController extends Controller
 
     public function render()
     {
+        if(session('status') == true)
+        {
+            return redirect('dashboard');
+        }
+        
         return view('login');
     }
 
 
     public function login(Request $request)
     {
+
         $payload = [
 
             'username' => $request->input('username'),

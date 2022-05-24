@@ -30,4 +30,14 @@ Route::post('/register', [RegisterController::class, 'createUser']);
 
 Route::get('/dashboard', [DashboardController::class, 'render']);
 
+Route::get('/products', [DashboardController::class, 'products']);
+
+Route::get('/tasks', [DashboardController::class, 'tasks']);
+
+Route::get('/messages', [DashboardController::class, 'messages']);
+
 Route::get('/logout', [DashboardController::class, 'logout']);
+
+Route::fallback(function(){
+    return view('404');
+});

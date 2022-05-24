@@ -10,11 +10,18 @@ class RegisterController extends Controller
 
     public function render()
     {
+
+        if(session('status') == true)
+        {
+            return redirect('dashboard');
+        }
+
         return view('register');
     }
 
     public function createUser(Request $request)
     {
+
         $payload = [
             'username' => $request->input('username-reg'),
             'email' => $request->input('email-reg'),
