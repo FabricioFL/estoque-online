@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Online Stock | dashboard</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <script src="{{asset('js/googleCharts.js')}}" defer></script>
 </head>
 <body class="bg-slate-900">
     <main>
@@ -21,24 +22,16 @@
             <a href="/logout" class="hover:text-pink-600 mx-1">&#128683; logout</a>
         </aside>
         <section class="flex flex-col">
-            <div class="px-8 py-3 mt-12 mx-auto rounded-xl bg-slate-600">
+            <div class="px-16 py-8 mt-12 mx-auto rounded-xl bg-slate-600">
                 <p class="text-slate-200 mx-auto text-center">Welcome SomeUser</p>
             </div>
-            <div class="p-20 w-1/2 mt-12 bg-slate-600 mx-auto">
-                <p class="mx-auto">
-                </p>
-            </div>
-
-            <div class="p-20 w-1/2 mt-12 bg-slate-600 mx-auto">
-                <p class="mx-auto">
-                </p>
-            </div>
-
-            <div class="p-20 w-1/2 mt-12 bg-slate-600 mx-auto">
-                <p class="mx-auto">
-                </p>
+            <div class="p-3 w-1/2 mx-auto bg-slate-600 mt-12 flex flex-wrap">
+                <div id="donutchart" class="border border-pink-600 w-32 md:w-40 lg:w-62 xl:w-1/2 mx-auto m-3"></div>
+                <div id="areachart" class="border border-pink-600 w-32 md:w-40 lg:w-62 xl:w-1/2 mx-auto m-3"></div>
+                <div id="columnchart" class="border border-pink-600 w-32 md:w-40 lg:w-62 xl:w-1/2 mx-auto m-3"></div>
             </div>
         </section>
     </main>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </body>
 </html>

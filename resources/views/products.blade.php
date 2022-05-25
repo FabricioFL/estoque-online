@@ -20,7 +20,17 @@
             <a href="/messages" class="hover:text-pink-600 mx-1">&#128233; Messages</a>
             <a href="/logout" class="hover:text-pink-600 mx-1">&#128683; logout</a>
         </aside>
-        <section></section>
+        <section>
+            <div class="flex justify-center mt-5">
+                <form class="flex justify-center w-1/2">
+                    <input type="search" class="w-1/2 px-2" name="product-search" id="product-search" placeholder="Search...">
+                    <button type="submit" class="bg-slate-700 text-slate-200 p-3 hover:bg-pink-600">Search</button>
+                </form>
+                <button class="bg-slate-700 text-slate-200 px-8 py-3 mx-2 hover:bg-pink-600">Add</button>
+                <button class="bg-slate-700 text-slate-200 px-8 py-3 mx-2 hover:bg-pink-600">Remove</button>
+                <button class="bg-slate-700 text-slate-200 px-8 py-3 mx-2 hover:bg-pink-600">Update</button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

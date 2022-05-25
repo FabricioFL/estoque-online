@@ -45,16 +45,23 @@
 
         </section>
         <section>
-            <div class="flex flex-col mt-12 p-3 w-1/2 mx-auto rounded-xl text-slate-200 bg-slate-600">
+            <div class="flex flex-col mt-12 p-5 w-1/2 mx-auto rounded-xl text-slate-200 bg-slate-600">
                 <h2 class="text-slate-200 mx-auto text-xl">Our features</h2>
-                <p class="mx-auto mt-5">&#9989; Store data about products and raw materials</p>
-                <p class="mx-auto mt-2">&#9989; Generate Qr code for products</p>
-                <p class="mx-auto mt-2">&#9989; Create and update tasks</p>
-                <p class="mx-auto mt-2">&#9989; Send messages to your teammates</p>
+                <div class="mx-auto">
+                    <p class="mt-5">&#9989; Store data about products and raw materials</p>
+                    <p class="mt-2">&#9989; Generate Qr code for products</p>
+                    <p class="mt-2">&#9989; Create and update tasks</p>
+                    <p class="mt-2">&#9989; Send messages to your teammates</p>
+                </div>
             </div>
         </section>
         <section class="mt-12 flex justify-center py-12">
-            <a href="/register" class="px-8 py-3 rounded-lg bg-slate-900 text-slate-200 hover:bg-pink-900">Create account now</a>
+            @if (session('status') == true)
+                <a href="/dashboard" class="px-8 py-3 rounded-lg select-none bg-slate-900 text-slate-200 hover:bg-pink-900">Open dashboard</a>
+            @endif
+            @if(session('status') != true)
+                <a href="/register" class="px-8 py-3 rounded-lg select-none bg-slate-900 text-slate-200 hover:bg-pink-900">Create account now</a>
+            @endif
         </section>
     </main>
 
